@@ -1,0 +1,308 @@
+<!-- <!DOCTYPE html>
+<html> -->
+<!-- <head>
+  <title>Contact Form Example</title>
+  <style>
+    /* Styles for the pop-up message */
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: none;
+    }
+
+    .popup-message {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .popup-message h2 {
+      margin-top: 0;
+    }
+
+    .popup-message button {
+      margin: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us</title>
+    <style>
+      /* Global styles */
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #001f3f;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to right, #021b79, #0575e6);
+        color:#fff
+      }
+      h1, h2, h3, h4, h5, h6 {
+        margin-top: 0;
+      }
+      a {
+        color: #001f3f;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      button, input[type="submit"] {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        color: #fff;
+        background-color: #001f3f;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover, input[type="submit"]:hover {
+        background-color: #001f3f;
+      }
+      /* Layout styles */
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #001f3f;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        color: #fff;
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+      }
+      .column {
+        flex: 1;
+        padding: 0 10px;
+        
+      }
+      /* Form styles */
+      .form {
+        padding: 20px;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="email"],
+      textarea {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+      }
+      select {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        background-color: #fff;
+      }
+      textarea {
+        height: 150px;
+      }
+      input[type="submit"] {
+        background-color: #0575e6;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #0575e6;
+        color: #fff;
+      }
+      /* Confirmation box styles */
+      .confirmation-box {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        padding: 20px;
+        z-index: 1;
+        color:#070707
+      }
+      .confirmation-box p {
+        margin-bottom: 20px;
+      }
+      .confirmation-buttons {
+        display: flex;
+        justify-content: center;
+      }
+      .confirmation-buttons button {
+        margin: 0 10px;
+      }
+      /* Custom styles */
+      .contact-heading {
+        color: #001f3f;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .contact-description {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .confirmation-box p {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .form-label {
+        color: #fff;
+      }
+      .form-input {
+        background-color: #f9f9f9;
+      }
+      .form-select {
+        background-color: #f9f9f9;
+      }
+      .form-submit {
+        background-color: #0575e6;
+        color: #fff;
+      }
+      .form-submit:hover {
+        background-color: #0575e6;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+      .logo img {
+        width: 110px;
+        height: 110px;
+        margin-right: 10px;
+      }
+      .logo h1 {
+        font-size: 24px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="Logo.jpg" alt="Bank Logo">
+        <h1>Timmy Bank</h1>
+      </div>
+    </header>
+
+
+    <h1 class="contact-heading">Contact Us</h1>
+  
+    <div class="row">
+      <div class="column">
+        <h2>We're Here to Help</h2>
+        <p class="contact-description">Send us an email with your questions or concerns, and we'll get back to you as soon as possible.</p>
+      </div>
+      <div class="column">
+        <div class="form">
+          <!-- <form id="contact-form" onsubmit="handleSubmit(event)"> -->
+            <form id="contact-form" onsubmit="showMessage(event)">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" id="name" name="name" required class="form-input">
+
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" id="email" name="email" required class="form-input">
+
+            <label for="reason" class="form-label">Reason for Contacting Us:</label>
+            <select id="reason" name="reason" class="form-select">
+              <option value="Technical">Report technical issues with the system</option>
+              <option value="Theft">Report credit card theft</option>
+              <option value="Loss">Report credit card loss</option>
+              <option value="Damage">Report credit card damage</option>
+            </select>
+
+            <label for="message" class="form-label">Message:</label>
+            <textarea id="message" name="message" required class="form-input"></textarea>
+
+            <!-- <input type="submit" value="Submit" class="form-submit"> -->
+
+            <button type="submit" onclick="showMessage()">Submit</button>
+    </form>
+
+    <p id="thankYouMessage" style="display:none;">Thank you for submitting the form!<br>
+      Do you want to apply for a new Credit Card?</p>
+        <div id="buttons" style="display:none;">
+        <!-- <button onclick="redirectToApplication()">Yes</button>
+        <button>No</button> -->
+        <button id="applyButton">Yes</button>
+        <button id="noButton">No</button>
+        <script>
+        const applyButton = document.getElementById("applyButton");
+        applyButton.addEventListener("click", function() {
+          redirectToApplication();
+          });
+          </script>
+        </div>
+
+        <script>
+          function redirectToApplication() {
+            const buttons = document.getElementById("buttons");
+            buttons.style.display = "none";
+            window.location.href = "CreditCardApplication.html";
+}
+        </script> 
+
+        <script> 
+          function showMessage(event){
+            // Prevent the form from submitting 
+            event.preventDefault();
+
+            //show the message 
+            const message = document.getElementById("thankYouMessage");
+            message.style.display = "block";
+
+            //show the buttons
+            const buttons = document.getElementById("buttons");
+            buttons.style.display = "block";
+          }
+        </script>
+</body>
+</html>
