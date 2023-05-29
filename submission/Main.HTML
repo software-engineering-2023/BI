@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Banking</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Online Banking</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Accounts</a></li>
+        <li><a href="#">Transactions</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="accounts-section">
+      <h2>Accounts</h2>
+      <ul id="accounts-list">
+        <!-- Dummy account data -->
+        <li>Account 1</li>
+        <li>Account 2</li>
+        <li>Account 3</li>
+      </ul>
+    </section>
+
+    <section id="transactions-section">
+      <h2>Transactions</h2>
+      <table id="transactions-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dummy transaction data -->
+          <tr>
+            <td>2023-05-25</td>
+            <td>$100.00</td>
+            <td>Payment</td>
+          </tr>
+          <tr>
+            <td>2023-05-24</td>
+            <td>$50.00</td>
+            <td>Withdrawal</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="settings-section">
+      <h2>Settings</h2>
+      <form id="settings-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your email">
+
+        <button type="submit">Save</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Online Banking. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

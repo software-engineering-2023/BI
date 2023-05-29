@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Alert</title>
+	<link rel="stylesheet" type="text/css" href="New-Alert.css">
+</head>
+<body>
+	<header>
+		<h1>New Alert Form</h1>
+	</header>
+	
+	<main>
+		<form id="new-alert-form">
+			<label>
+				Account Number:
+				<input type="text" name="account_number" required>
+			</label>
+			<label>
+				Frequency:
+				<select name="frequency" required>
+					<option value="">Select frequency</option>
+					<option value="daily">Daily</option>
+					<option value="weekly">Weekly</option>
+					<option value="monthly">Monthly</option>
+					<option value="yearly">Yearly</option>
+					<option value="custom">Custom</option>
+				</select>
+			</label>
+			<label>
+				Payment Type:
+				<select name="payment_type" required>
+					<option value="">Select payment type</option>
+					<option value="gas">Gas</option>
+					<option value="water">Water</option>
+					<option value="telephone">Telephone</option>
+                    <option value="credit_card_payment">Credit Card Payment</option>
+                    <option value="loan_payment">Loan Payment</option>
+                </select>
+            </label>
+            <label>
+                Amount ($):
+			<input type="text" name="amount" required>
+		</label>
+		<label>
+			Alert Delivery Method:
+			<select name="alert_delivery_method" required>
+				<option value="">Select alert delivery method</option>
+				<option value="sms">SMS Text Message</option>
+				<option value="phone_call">Phone Call</option>
+				<option value="push_notification">Push Notification to the System</option>
+				<option value="email">Email</option>
+			</select>
+		</label>
+		<input type="submit" value="Submit">
+		<input type="button" value="Go Back" onclick="history.go(-1)">
+	</form>
+</body>
+  <p>&copy; 2023 Timmy Bank. All rights reserved.</p>
+</footer>
+
+<script>
+  const form = document.querySelector('#new-alert-form');
+  const submitButton = form.querySelector('input[type=submit]');
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const formData = new FormData(form);
+    const alertData = Object.fromEntries(formData.entries());
+
+    // Send alert data to server and handle server response here
+
+    // Show pop-up message
+    alert("Alert created successfully!");
+
+    // Reset form
+    form.reset();
+  });
+</script>

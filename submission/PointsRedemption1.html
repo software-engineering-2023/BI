@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Credit Card Points Redemption</title>
+  <link rel="stylesheet" type="text/css" href="PointsRedemption1.css">
+</head>
+<body>
+  <header>
+    <img src="Logo.jpg" alt="Bank Logo" class="logo">
+    <h1>  Credit Card Points Redemption</h1>
+  </header>
+  
+  <div class="main-content">
+    <h2>My Points</h2>
+    <p>Total Points: <span id="points">5000</span></p>
+    
+    <h2>Redeem Points</h2>
+    <form id="redeem-form">
+      <label for="points-redeem">Enter the amount of points you want to redeem:</label>
+      <input type="number" id="points-redeem" name="points-redeem" min="0" step="1" placeholder="Enter points to redeem">
+      
+      <input type="submit" value="Redeem">
+    </form>
+    
+    <div id="result" style="display: none;">
+      <h3>Redemption Successful!</h3>
+      <p>Thank you for redeeming your points.</p>
+      <p>Your remaining points: <span id="remaining-points"></span></p>
+      <p>You received a cash back of $<span id="cash-back"></span>.</p>
+    </div>
+  </div>
+  
+  <footer>
+    &copy; 2023 Timmy bank. All rights reserved.
+  </footer>
+  
+  <script src="PointsRedemption1.js"></script>
+</body>
+</html>
