@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Alerts</title>
+	<link rel="stylesheet" type="text/css" href="Alert.css">
+</head>
+<body>
+	<header>
+		<nav>
+				<a href="New-Alert.html"><button class="button">New Alert</button></a>
+		</nav>
+	</header>
+	
+	<main>
+		<h1>Alerts</h1>
+		<section>
+			<h2>History Alerts</h2>
+			<p>No history alerts found.</p>
+		</section>
+		<section>
+			<h2>Security Alerts</h2>
+			<form name="security_alerts_form">
+				<fieldset>
+					<legend>Select the security alerts you want to receive:</legend>
+					<label><input type="checkbox" name="security_alerts[]" value="login_attempt"> Login Attempt</label>
+					<label><input type="checkbox" name="security_alerts[]" value="password_change"> Password Change</label>
+					<label><input type="checkbox" name="security_alerts[]" value="transaction"> Transaction</label>
+				</fieldset>
+				<input type="submit" value="Save">
+			</form>
+		</section>
+	</main>
+	
+	<footer>
+		<p>&copy; 2023 Timmy Bank. All rights reserved.</p>
+	</footer>
+</body>
+</html>

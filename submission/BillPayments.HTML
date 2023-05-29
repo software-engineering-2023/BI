@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bill Page</title>
+  <link rel="stylesheet" href="BillPayments.css">
+</head>
+
+<body>
+  <header>
+    <img src="Logo.jpg" alt="Bank Logo" class="bank-logo">
+    <h1>Bill Page</h1>
+  </header>
+
+  <main>
+    <h2>Due Bills</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Bill Type</th>
+          <th>Amount</th>
+          <th>Due Date</th>
+          <th>Status</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Gas</td>
+          <td>$50.00</td>
+          <td>June 1, 2023</td>
+          <td class="status unpaid">Unpaid</td>
+          <td><button class="pay-button">Pay</button></td>
+        </tr>
+        <tr>
+          <td>Electricity</td>
+          <td>$80.00</td>
+          <td>June 3, 2023</td>
+          <td class="status unpaid">Unpaid</td>
+          <td><button class="pay-button">Pay</button></td>
+        </tr>
+        <tr>
+          <td>Water</td>
+          <td>$30.00</td>
+          <td>June 5, 2023</td>
+          <td class="status unpaid">Unpaid</td>
+          <td><button class="pay-button">Pay</button></td>
+        </tr>
+        <tr>
+          <td>Telephone</td>
+          <td>$45.00</td>
+          <td>June 7, 2023</td>
+          <td class="status unpaid">Unpaid</td>
+          <td><button class="pay-button">Pay</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Timmy Bank. All rights reserved.</p>
+  </footer>
+  <div id="payment-modal" class="modal">
+    <div class="modal-content">
+      <span id="modal-close" class="modal-close">&times;</span>
+      <h2>Payment Details</h2>
+      <p>Bill Type: <span id="bill-type"></span></p>
+      <form class="payment-form" onsubmit="return validateForm()">
+        <label for="account-number">Account Number:</label>
+        <input type="text" id="account-number" required>
+        <label for="payment-method">Payment Method:</label>
+        <select id="payment-method" required>
+          <option value="">Select Payment Method</option>
+          <option value="Bank">Bank Transfer</option>
+          <option value="Fawry">Fawry</option>
+          <option value="Credit Card">Credit Card</option>
+        </select>
+        
+        <div id="credit-card-info" class="payment-info" style="display: none;">
+          <!-- Credit Card Info Fields -->
+          <label for="card-number">Card Number:</label>
+          <input type="text" id="card-number" required>
+        
+          <label for="card-holder">Card Holder Name:</label>
+          <input type="text" id="card-holder" required>
+        
+          <label for="expiration-month">Expiration Month:</label>
+          <select id="expiration-month" required>
+            <option value="">Select Month</option>
+            <option value="January">01</option>
+            <option value="February">02</option>
+            <option value="March">03</option>
+            <option value="April">04</option>
+            <option value="May">05</option>
+            <option value="June">06</option>
+            <option value="July">07</option>
+            <option value="August">08</option>
+            <option value="September">09</option>
+            <option value="October">10</option>
+            <option value="November">11</option>
+            <option value="December">12</option>
+          </select>
+        
+          <label for="expiration-year">Expiration Year:</label>
+          <select id="expiration-year" required>
+            <option value="">Select Year</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+            <option value="2031">2031</option>
+            <option value="2032">2032</option>
+            <option value="2033">2033</option>
+          </select>
+        
+          <label for="cvv">CVV:</label>
+          <input type="text" id="cvv" required>
+        </div>
+        
+        
+        <!-- Bank Fields -->
+        <div id="bank-info" class="payment-info" style="display: none;">
+          <label for="receiver-account-number">Receiver Account Number:</label>
+          <input type="text" id="receiver-account-number" required>
+          <label for="receiver-bank-name">Receiver Bank Name:</label>
+          <input type="text" id="receiver-bank-name" required>
+        </div>
+        
+        <!-- Fawry Fields -->
+        <div id="fawry-info" class="payment-info" style="display: none;">
+          <label for="fawry-number">Fawry Number:</label>
+          <input type="text" id="fawry-number" required>
+        </div>
+        
+        <button id="pay-bill-button" type="submit">Pay Bill</button>
+
+      </form>
+      <div id="success-message" class="message success-message">Payment successful!</div>
+      <div id="error-message" class="message error-message"></div>
+    </div>
+  </div>
+  
+  <script src="BillPayments.js"></script>
+  
+</body>
+
+</html>

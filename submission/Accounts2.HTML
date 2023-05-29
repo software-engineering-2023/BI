@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Page</title>
+  <link rel="stylesheet" href="Accounts.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="Logo.jpg" alt="Bank Logo">
+    </div>
+    <div class="welcome-message">
+      <p>Welcome, <span id="username"></span></p>
+    </div>
+    <div class="logout-container">
+      <button id="logout-btn">Logout</button>
+    </div>
+  </header>
+  
+
+  <main>
+    <section>
+      <h2>Account Information</h2>
+      <div id="account-info-container"></div>
+    </section>
+
+    <section>
+      <h2>Transaction History</h2>
+      <table id="transaction-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Transaction rows will be dynamically populated here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <div class="action-buttons">
+    <button id="open-account-btn">Open Account</button>
+    <button id="close-account-btn">Close Account</button>
+  </div>
+  <script src="Accounts.js"></script>
+</body>
+
+</html>
