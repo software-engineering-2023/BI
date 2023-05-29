@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment Page</title>
+  <link rel="stylesheet" href="CardCharge1.css">
+</head>
+<body>
+  <header>
+    <img src="Logo.jpg" alt="Bank Logo" class="logo">
+    <h1>Payment Page</h1>
+  </header>
+  
+  <div class="main-content">
+    <p id="pending-charge">Pending charge = $10,970.00</p>
+  
+    <div class="button-container">
+      <button onclick="payFullAmount()" class="primary-button">Pay full amount</button>
+      <button onclick="payPartially()" class="secondary-button">Pay partial amount</button>
+    </div>
+  
+  
+    <div id="amountPopup" class="popup" style="display: none;">
+      <input id="amountTextbox" type="text" placeholder="Enter amount">
+      <br><br>
+      <button onclick="closeAmountPopup()" class="primary-button">Submit</button>
+    </div>
+  
+    <div id="successPopup" class="popup" style="display: none;">
+      <p>Payment Successfully Made! Your Account Balance and Pending Charge is Now Updated</p>
+      <button onclick="closePopup('successPopup')" class="primary-button">Close</button>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2023 Timmy bank. All rights reserved.
+  </footer>
+
+  <script src="CardCharge1.js"></script>
+</body>
+</html>

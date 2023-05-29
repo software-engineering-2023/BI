@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Credit Card Application</title>
+  <script src="CreditCardApplication.JS"></script>
+  <link rel="stylesheet" type="text/css" href="CreditCardApplication.CSS">
+</head>
+<body>
+  <h1>Card Application Form</h1>
+  <form action="process_loan.php" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required><br><br>
+    
+    <label for="citizenship">Citizenship:</label>
+    <select id="citizenship" name="citizenship" required>
+      <option value="citizen">Citizen</option>
+      <option value="foreigner">Foreigner</option>
+    </select><br><br>
+    
+    <div id="idSection">
+      <label for="nationalId">National ID (14 digits):</label>
+      <input type="text" id="nationalId" name="nationalId" pattern="\d{14}" maxlength="14" required><br><br>
+    </div>
+    
+    <div id="passportSection" style="display: none;">
+      <label for="passport">Passport Number:</label>
+      <input type="text" id="passport" name="passport" pattern="[A-Za-z0-9]+" maxlength="20" required><br><br>
+    </div>
+    
+    <label for="type">Card Type:</label>
+    <select id="type" name="type">
+      <option value="Debit">Debit</option>
+      <option value="Credit">Credit</option>
+    </select><br><br>
+    <a href="submit_application.html"
+    <button class="button">Submit</button>
+  </form>
+  
+  <script src="CreditCardApplication.JS"></script>
+</body>
+</html>

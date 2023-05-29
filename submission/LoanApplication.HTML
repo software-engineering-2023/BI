@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loan Application</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="Application2.CSS">
+</head>
+<body>
+  <h1>Loan Application Form</h1>
+  <form action="process_loan.php" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required><br><br>
+    
+    <label for="citizenship">Citizenship:</label>
+    <select id="citizenship" name="citizenship" required>
+      <option value="citizen">Citizen</option>
+      <option value="foreigner">Foreigner</option>
+    </select><br><br>
+    
+    <div id="idSection">
+      <label for="nationalId">National ID (14 digits):</label>
+      <input type="text" id="nationalId" name="nationalId" pattern="\d{14}" maxlength="14"><br><br>
+    </div>
+    
+    <div id="passportSection">
+      <label for="passport">Passport Number:</label>
+      <input type="text" id="passport" name="passport" pattern="[A-Za-z0-9]+" maxlength="20"><br><br>
+    </div>
+    
+    <label for="amount">Loan Amount:</label>
+    <input type="text" id="amount" name="amount" required><br><br>
+    
+    <label for="purpose">Loan Purpose:</label>
+    <select id="purpose" name="purpose">
+      <option value="personal">Personal</option>
+      <option value="business">Car</option>
+    </select><br><br>
+    <a href="submit_application.html"
+    <button>Submit</button>
+
+  </form>
+</body>
+</html>
+
+

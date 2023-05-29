@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Credit Card Points</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Credit Card Points</h1>
+  </header>
+  
+  <div class="main-content">
+    <h2>My Points</h2>
+    <p>Total Points: <span id="points">5000</span></p>
+    
+    <h2>Redeem Points</h2>
+    <form id="redeem-form">
+      <label for="points-redeem">Enter the amount of points you want to redeem:</label>
+      <input type="number" id="points-redeem" name="points-redeem" min="0" step="1" placeholder="Enter points to redeem">
+      
+      <input type="submit" value="Redeem">
+    </form>
+    
+    <div id="result" style="display: none;">
+      <h3>Redemption Result</h3>
+      <p id="message"></p>
+      <p>Updated Points: <span id="updated-points"></span></p>
+    </div>
+  </div>
+  
+  <footer>
+    &copy; 2023 Tameem bank
+  </footer>
+  
+  <script src="Points.js"></script>
+</body>
+</html>
+
